@@ -9,6 +9,7 @@ impl TinyBook {
     pub fn new(symbol: &str) -> Self {
         TinyBook {
             symbol: symbol.to_string(),
+            bids: Vec::new(),
         }
     }
 }
