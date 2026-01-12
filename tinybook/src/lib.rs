@@ -1,15 +1,14 @@
 pub(crate) struct TinyBook {
-    title: String,
+    pub symbol: String,
+
+    /// bid side price levels (buy order)
+    pub bids: Vec<(f64, f64)>, // (price, quantity)
 }
 
 impl TinyBook {
-    pub fn new(title: &str) -> Self {
+    pub fn new(symbol: &str) -> Self {
         TinyBook {
-            title: title.to_string(),
+            symbol: symbol.to_string(),
         }
-    }
-
-    pub fn title(&self) -> &str {
-        &self.title
     }
 }
