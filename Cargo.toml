@@ -1,3 +1,19 @@
+[package]
+name = "tinybook"
+version = "0.1.0"
+edition = "2024"
+include = [
+  "tinybook/**/*",
+  "examples/**/*.rs"
+]
+
+[lib]
+path = "tinybook/lib.rs"
+
 [workspace]
-resolver = "3"
-members = ["tinybook"]
+members = ["examples"]
+
+[workspace.dependencies]
+tinybook = { path = "." }
+
+

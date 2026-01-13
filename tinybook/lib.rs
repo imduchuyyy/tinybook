@@ -1,4 +1,4 @@
-pub(crate) struct TinyBook {
+pub struct TinyBook {
     pub symbol: String,
 
     /// bid side price levels (buy order)
@@ -11,5 +11,9 @@ impl TinyBook {
             symbol: symbol.to_string(),
             bids: Vec::new(),
         }
+    }
+
+    pub fn symbol(&self) -> &str {
+        &self.symbol
     }
 }
